@@ -1,6 +1,6 @@
 module Api
   module V1
-    class  ApiController < Api::BaseController
+    class  ApiController < ActionController::API
     end
   end
 end
