@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   def react_component(name, props = {}, options = {}, &block)
     default_html_options = { data: { react_class: name,

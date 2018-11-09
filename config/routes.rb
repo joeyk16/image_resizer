@@ -1,5 +1,11 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  get 'pages/home'
-  root to: "pages#home"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: 'pages#home'
+
+  namespace :api do
+    namespace :v1 do
+      post 'resize' => 'image_resizer#create', as: :resize
+    end
+  end
 end

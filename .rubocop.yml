@@ -1,0 +1,50 @@
+AllCops:
+  TargetRubyVersion: 2.5.1
+  TargetRailsVersion: 5.2
+  DisplayCopNames: true
+  Exclude:
+    - 'node_modules/**/*'
+    - 'bin/*'
+    - 'db/schema.rb'
+
+Rails:
+  Enabled: true
+
+Layout/EmptyLines:
+  Exclude:
+     - 'config/environments/production.rb'
+
+Metrics/LineLength:
+  Max: 100
+  AllowURI: true
+  Exclude:
+    - 'config/initializers/devise.rb'
+    - 'db/**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'config/environments/production.rb'
+
+Metrics/MethodLength:
+  Exclude:
+    - app/services/authentication_api.rb
+    - 'db/migrate/**/*'
+
+Metrics/AbcSize:
+  Max: 20
+  Exclude:
+    - 'db/migrate/**/*'
+
+Rails/ReversibleMigration:
+  Enabled: false
+
+Security/YAMLLoad:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FormatStringToken:
+  Exclude:
+    - 'config/initializers/date_formats.rb'
