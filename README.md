@@ -1,9 +1,9 @@
 # Setup Project
 
-`bundle`
-`cp config/database.yml.example config/database.yml`
-`rake db:setup`
-`rails s`
+ 1. `bundle`
+ 2. `cp config/database.yml.example config/database.yml`
+ 3. `rake db:setup`
+ 4. `rails s`
 
 # Run specs
 `rspec`
