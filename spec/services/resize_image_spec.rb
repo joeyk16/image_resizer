@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe ResizeImage do
@@ -18,7 +20,7 @@ RSpec.describe ResizeImage do
       allow_any_instance_of(described_class).to receive(:resize).and_return(nil)
     end
 
-    it "saves image with attached file" do
+    it 'saves image with attached file' do
       expect do
         resize_image.call
       end.to change(Image, :count).by(1)
@@ -26,7 +28,7 @@ RSpec.describe ResizeImage do
       expect(created_image.file.attached?).to be_truthy
     end
 
-    it "returns resized image url" do
+    it 'returns resized image url' do
       expect(resize_image.call).to include(
         "#{Rails.application.secrets.asset_host}/rails/active_storage/blobs/"
       )
