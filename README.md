@@ -1,3 +1,5 @@
+This app has an api to resize images from a url. I started thinking I was going to build a frontend react component where you can drag and drop an image, but I decided to leave this out so it's just an api only.  
+
 # Setup Project
 
  1. `bundle`
