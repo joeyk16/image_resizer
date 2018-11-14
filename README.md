@@ -27,3 +27,8 @@ Body:
 # To deploy
 
 Use heroku, or EC2 instance using capistrano, or AWS Elastic bean stalk.
+
+# Scaling
+
+This app will not scale. The ResizeImage service should be put
+into a background job such as sidekiq.
