@@ -7,6 +7,7 @@ class ResizeImage
     @url = params[:url]
     @width = params[:width]
     @height = params[:height]
+    @resize_path = Rails.root.join('tmp', 'images', File.basename(url))
     @errors = []
   end
 
@@ -22,8 +23,7 @@ class ResizeImage
 
   def resize
     resize_image = MiniMagick::Image.open(url)
-    resize_image.resize "#{width}x#{height}"
-    @resize_path = Rails.root.join('tmp', 'images', File.basename(url))
+    resize_image.resize("#{width}x#{height}")
     resize_image.write resize_path
   rescue Errno::ENOENT => error
     @errors << error.to_s
