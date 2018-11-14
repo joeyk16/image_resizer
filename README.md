@@ -26,7 +26,11 @@ Body:
 
 # To deploy
 
-Use heroku, or EC2 instance using capistrano, or AWS Elastic bean stalk.
+Use heroku if you want to deploy easily and install sidekiq when needed. It not cheap compared to options.
+
+EC2 instance using capistrano its just harder to install sidekiq when needed.
+
+AWS Elastic bean stalk, it's cheap, deploys easily and can install sidekiq much easier then EC2.
 
 # Scaling
 
