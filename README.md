@@ -1,4 +1,4 @@
-This app has an api to resize images from a url. I started thinking I was going to build a frontend react component where you can drag and drop an image. After building half of it I decided to leave the react component out so it's just an api.  
+This app is an api to resize images from a url.
 
 # Setup Project
 
